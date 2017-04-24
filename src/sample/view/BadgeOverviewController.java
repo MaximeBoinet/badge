@@ -351,6 +351,13 @@ public class BadgeOverviewController {
     @FXML
     private void handleCam() {
         Image img = main.showCamCap();
+
+        try {
+            Main.grabber.stop();
+        } catch (FrameGrabber.Exception e) {
+            e.printStackTrace();
+        }
+
         if (img != null) {
             String now = Date.from(Instant.now()).toString();
             now = (now.replace(":", "")).replace(" ", "");

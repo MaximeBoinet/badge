@@ -27,26 +27,10 @@ public class Main extends Application {
         this.primaryStage.setTitle("BadgeMaker");
         lestage = this.primaryStage;
         lemain = this;
-        grabber = new VideoInputFrameGrabber(0);
-        grabber.start();
         initRootLayout();
         showBadgeOverview();
     }
-
-    @Override
-    public void stop() {
-        try {
-            super.stop();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            grabber.stop();
-        } catch (FrameGrabber.Exception e) {
-            e.printStackTrace();
-        }
-    }
-
+    
     private void initRootLayout() {
         try {
             FXMLLoader loader = new FXMLLoader();
@@ -74,6 +58,8 @@ public class Main extends Application {
 
     public Image showCamCap() {
         try {
+            grabber = new VideoInputFrameGrabber(0);
+            grabber.start();
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(Main.class.getResource("view/CamOverView.fxml"));
             AnchorPane page = loader.load();
@@ -85,6 +71,7 @@ public class Main extends Application {
             dialogStage.setScene(scene);
             CamOverView controller = loader.getController();
             controller.setDialogStage(dialogStage);
+
             controller.setFg(grabber);
             dialogStage.showAndWait();
             return controller.getPhotoTaken();
