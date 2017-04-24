@@ -33,6 +33,20 @@ public class Main extends Application {
         showBadgeOverview();
     }
 
+    @Override
+    public void stop() {
+        try {
+            super.stop();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            grabber.stop();
+        } catch (FrameGrabber.Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     private void initRootLayout() {
         try {
             FXMLLoader loader = new FXMLLoader();
