@@ -30,7 +30,7 @@ public class Main extends Application {
         initRootLayout();
         showBadgeOverview();
     }
-    
+
     private void initRootLayout() {
         try {
             FXMLLoader loader = new FXMLLoader();
