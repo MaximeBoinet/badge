@@ -17,7 +17,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.view.BadgeOverviewController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="825.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.view.BadgeOverviewController">
    <children>
       <GridPane layoutX="161.0" layoutY="79.0" prefHeight="500.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <columnConstraints>
@@ -28,26 +28,26 @@
           <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <GridPane GridPane.rowIndex="1">
+            <GridPane prefHeight="404.0" prefWidth="1000.0" GridPane.rowIndex="1">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
               </columnConstraints>
               <rowConstraints>
-                <RowConstraints maxHeight="156.0" minHeight="10.0" prefHeight="88.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="1.7976931348623157E308" minHeight="0.0" prefHeight="203.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="217.0" minHeight="10.0" prefHeight="106.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="1.7976931348623157E308" minHeight="0.0" prefHeight="385.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;">
+                  <Pane prefHeight="150.0" prefWidth="1000.0" style="-fx-border-color: black;">
                      <children>
-                        <Label layoutX="36.0" layoutY="36.0" text="Photo:">
+                        <Label layoutX="14.0" layoutY="35.0" text="Photo:">
                            <font>
                               <Font name="Yu Gothic Bold" size="14.0" />
                            </font>
                         </Label>
-                        <GridPane layoutX="93.0" layoutY="30.0" prefHeight="30.0" prefWidth="355.0">
+                        <GridPane layoutX="84.0" layoutY="30.0" prefHeight="30.0" prefWidth="364.0">
                           <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="125.0" minWidth="10.0" prefWidth="119.0" />
-                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="85.0" minWidth="10.0" prefWidth="22.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="135.0" minWidth="10.0" prefWidth="135.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="85.0" minWidth="10.0" prefWidth="30.0" />
                               <ColumnConstraints hgrow="SOMETIMES" maxWidth="174.0" minWidth="10.0" prefWidth="145.0" />
                               <ColumnConstraints hgrow="SOMETIMES" maxWidth="131.0" minWidth="10.0" prefWidth="20.0" />
                           </columnConstraints>
@@ -55,9 +55,9 @@
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
-                              <Button mnemonicParsing="false" onAction="#handleChoosePicPort" text="Choisir un fichier" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                              <Button mnemonicParsing="false" onAction="#handleChoosePicPort" prefHeight="26.0" prefWidth="152.0" text="Choisir un fichier" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
                               <Button mnemonicParsing="false" onAction="#handleCam" text="Prendre une photo" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-                              <Label text="ou" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                              <Label prefHeight="16.0" prefWidth="23.0" text="ou" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                                  <GridPane.margin>
                                     <Insets />
                                  </GridPane.margin>
@@ -67,7 +67,7 @@
                         </GridPane>
                         <Pane fx:id="panIMG" layoutX="466.0" layoutY="10.0" onDragDropped="#handleMouseDragDroppedPhoto" onDragExited="#handleDrageExitedPhoto" onDragOver="#handleMouseDragOverPhoto" prefHeight="68.0" prefWidth="86.0" style="-fx-background-color: #c7c7c7; -fx-border-color: black;">
                            <children>
-                              <Label layoutX="19.0" layoutY="26.0" text="glisser ici" />
+                              <Label layoutX="13.0" layoutY="26.0" text="glisser ici" />
                            </children>
                         </Pane>
                         <Pane layoutX="558.0" layoutY="1.0" prefHeight="88.0" prefWidth="239.0">
@@ -78,25 +78,25 @@
                               <Label fx:id="verPicL" layoutX="190.0" layoutY="34.0" text="Label" />
                               <Button layoutX="215.0" layoutY="60.0" mnemonicParsing="false" onAction="#handleResetPort" text="×" textFill="RED" />
                               <Slider fx:id="taillePicS" layoutX="14.0" layoutY="53.0" value="60.0" />
-                              <Label fx:id="taillePicL" layoutX="70.0" layoutY="64.0" text="Label" />
+                              <Label fx:id="taillePicL" layoutX="70.0" layoutY="74.0" text="Label" />
                            </children>
                         </Pane>
                      </children>
                   </Pane>
                   <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
                      <children>
-                        <Region layoutY="-1.0" prefHeight="83.0" prefWidth="429.0" style="-fx-border-color: BLACK;" />
-                        <Region layoutY="81.0" prefHeight="121.0" prefWidth="429.0" style="-fx-border-color: BLACK;" />
-                        <Region layoutX="428.0" layoutY="-1.0" prefHeight="122.0" prefWidth="372.0" style="-fx-border-color: black;" />
-                        <Region layoutX="428.0" layoutY="120.0" prefHeight="82.0" prefWidth="372.0" style="-fx-border-color: black;" />
-                        <GridPane maxWidth="-Infinity">
+                        <Region layoutY="-1.0" prefHeight="100.0" prefWidth="429.0" style="-fx-border-color: BLACK;" />
+                        <Region layoutY="97.0" prefHeight="155.0" prefWidth="429.0" style="-fx-border-color: BLACK;" />
+                        <Region layoutX="428.0" layoutY="-1.0" prefHeight="144.0" prefWidth="400.0" style="-fx-border-color: black;" />
+                        <Region layoutX="428.0" layoutY="141.0" prefHeight="111.0" prefWidth="400.0" style="-fx-border-color: black;" />
+                        <GridPane layoutY="-10.0" maxWidth="-Infinity" prefHeight="241.0" prefWidth="190.0">
                           <columnConstraints>
                             <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="190.0" />
                           </columnConstraints>
                           <rowConstraints>
-                              <RowConstraints maxHeight="46.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
-                            <RowConstraints maxHeight="92.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
-                              <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="15.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="64.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="92.0" minHeight="10.0" prefHeight="58.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
                             <RowConstraints maxHeight="116.0" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
@@ -116,12 +116,12 @@
                                     <Insets right="20.0" />
                                  </GridPane.margin>
                               </Label>
-                              <TextField fx:id="nomprenomTF" onKeyReleased="#handleNomPrenom" prefHeight="25.0" prefWidth="125.0" GridPane.rowIndex="1">
+                              <TextField fx:id="nomprenomTF" onKeyReleased="#handleNomPrenom" prefHeight="20.0" prefWidth="180.0" GridPane.rowIndex="1">
                                  <GridPane.margin>
                                     <Insets left="5.0" right="5.0" />
                                  </GridPane.margin>
                               </TextField>
-                              <GridPane GridPane.rowIndex="3">
+                              <GridPane prefHeight="131.0" prefWidth="190.0" GridPane.rowIndex="3">
                                 <columnConstraints>
                                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="198.0" />
                                 </columnConstraints>
@@ -142,19 +142,19 @@
                               </GridPane>
                            </children>
                         </GridPane>
-                        <Pane layoutX="192.0" prefHeight="82.0" prefWidth="237.0">
+                        <Pane layoutX="192.0" prefHeight="83.0" prefWidth="237.0">
                            <children>
                               <Slider fx:id="horNomS" layoutX="14.0" layoutY="14.0" value="20.0" />
                               <Slider fx:id="verNomS" layoutX="161.0" layoutY="1.0" orientation="VERTICAL" prefHeight="79.0" prefWidth="14.0" value="20.0" />
                               <Label fx:id="horNomL" layoutX="70.0" layoutY="24.0" text="Label" />
                               <Label fx:id="verNomL" layoutX="175.0" layoutY="32.0" text="Label" />
                               <CheckBox fx:id="nomprenomCB" layoutX="180.0" layoutY="6.0" mnemonicParsing="false" onAction="#handleBoldName" selected="true" text="Gras" />
-                              <Button layoutX="212.0" layoutY="55.0" mnemonicParsing="false" onAction="#handleResetNom" text="×" textFill="RED" />
+                              <Button layoutX="193.0" layoutY="54.0" mnemonicParsing="false" onAction="#handleResetNom" text="×" textFill="RED" />
                               <Slider fx:id="tailleNomS" layoutX="14.0" layoutY="48.0" max="50.0" min="9.0" value="18.0" />
                               <Label fx:id="tailleNomL" layoutX="70.0" layoutY="59.0" text="Label" />
                            </children>
                         </Pane>
-                        <Pane layoutX="192.0" layoutY="100.0" prefHeight="103.0" prefWidth="190.0">
+                        <Pane layoutX="191.0" layoutY="126.0" prefHeight="103.0" prefWidth="190.0">
                            <children>
                               <Slider fx:id="horTitleS" layoutX="14.0" layoutY="14.0" value="20.0" />
                               <Label fx:id="horTitleL" layoutX="70.0" layoutY="28.0" text="Label" />
@@ -170,35 +170,35 @@
                         </Label>
                         <Slider fx:id="horLogS" layoutX="446.0" layoutY="34.0" value="30.0" />
                         <Slider fx:id="verLogS" layoutX="604.0" layoutY="16.0" orientation="VERTICAL" prefHeight="88.0" prefWidth="14.0" value="80.0" />
-                        <Button layoutX="404.0" layoutY="175.0" mnemonicParsing="false" onAction="#handleResetTitle" text="×" textFill="RED" />
-                        <Label fx:id="horLogL" layoutX="502.0" layoutY="48.0" text="Label" />
+                        <Button layoutX="383.0" layoutY="200.0" mnemonicParsing="false" onAction="#handleResetTitle" text="×" textFill="RED" />
+                        <Label fx:id="horLogL" layoutX="502.0" layoutY="57.0" text="Label" />
                         <Label fx:id="verLogL" layoutX="618.0" layoutY="57.0" text="Label" />
-                        <CheckBox fx:id="titleCB" layoutX="371.0" layoutY="93.0" mnemonicParsing="false" onAction="#handleBoldTitre" text="Gras" />
-                        <Label fx:id="verTitleL" layoutX="368.0" layoutY="141.0" text="Label" />
-                        <Label layoutX="446.0" layoutY="126.0" text="Fond:">
+                        <CheckBox fx:id="titleCB" layoutX="356.0" layoutY="106.0" mnemonicParsing="false" onAction="#handleBoldTitre" text="Gras" />
+                        <Label fx:id="verTitleL" layoutX="379.0" layoutY="161.0" text="Label" />
+                        <Label layoutX="445.0" layoutY="154.0" text="Fond:">
                            <font>
                               <Font name="Yu Gothic Bold" size="14.0" />
                            </font>
                         </Label>
                         <Slider fx:id="tailleLogS" layoutX="446.0" layoutY="81.0" value="30.0" />
-                        <Label fx:id="tailleLogL" layoutX="502.0" layoutY="89.0" text="Label" />
-                        <Button layoutX="668.0" layoutY="2.0" mnemonicParsing="false" onAction="#handleChoosePicLogo" text="Choisir un fichier" />
-                        <Button layoutX="465.0" layoutY="149.0" mnemonicParsing="false" onAction="#handleChoosePicFond" text="Choisir un fichier" />
-                        <Button layoutX="774.0" layoutY="94.0" mnemonicParsing="false" onAction="#handleResetLogo" text="×" textFill="RED" />
-                        <Button layoutX="774.0" layoutY="175.0" mnemonicParsing="false" onAction="#handleResetBack" text="×" textFill="RED" />
-                        <Label layoutX="713.0" layoutY="26.0" text="ou" />
-                        <Pane fx:id="panLogo" layoutX="677.0" layoutY="48.0" onDragDropped="#handleMouseDragDroppedLogo" onDragExited="#handleDrageExitedLogo" onDragOver="#handleMouseDragOverLogo" prefHeight="68.0" prefWidth="86.0" style="-fx-background-color: #c7c7c7; -fx-border-color: black;">
+                        <Label fx:id="tailleLogL" layoutX="502.0" layoutY="103.0" text="Label" />
+                        <Button layoutX="665.0" layoutY="11.0" mnemonicParsing="false" onAction="#handleChoosePicLogo" text="Choisir un fichier" />
+                        <Button layoutX="434.0" layoutY="197.0" mnemonicParsing="false" onAction="#handleChoosePicFond" prefHeight="26.0" prefWidth="140.0" text="Choisir un fichier" />
+                        <Button layoutX="781.0" layoutY="89.0" mnemonicParsing="false" onAction="#handleResetLogo" text="×" textFill="RED" />
+                        <Button layoutX="780.0" layoutY="211.0" mnemonicParsing="false" onAction="#handleResetBack" text="×" textFill="RED" />
+                        <Label layoutX="713.0" layoutY="41.0" text="ou" />
+                        <Pane fx:id="panLogo" layoutX="678.0" layoutY="62.0" onDragDropped="#handleMouseDragDroppedLogo" onDragExited="#handleDrageExitedLogo" onDragOver="#handleMouseDragOverLogo" prefHeight="68.0" prefWidth="86.0" style="-fx-background-color: #c7c7c7; -fx-border-color: black;">
                            <children>
-                              <Label layoutX="19.0" layoutY="26.0" text="glisser ici" />
+                              <Label layoutX="13.0" layoutY="26.0" text="glisser ici" />
                            </children>
                         </Pane>
-                        <Pane fx:id="panFond" layoutX="618.0" layoutY="127.0" onDragDropped="#handleMouseDragDroppedFond" onDragExited="#handleDrageExitedFond" onDragOver="#handleMouseDragOverFond" prefHeight="68.0" prefWidth="86.0" style="-fx-background-color: #c7c7c7; -fx-border-color: black;">
+                        <Pane fx:id="panFond" layoutX="619.0" layoutY="164.0" onDragDropped="#handleMouseDragDroppedFond" onDragExited="#handleDrageExitedFond" onDragOver="#handleMouseDragOverFond" prefHeight="68.0" prefWidth="86.0" style="-fx-background-color: #c7c7c7; -fx-border-color: black;">
                            <children>
-                              <Label layoutX="19.0" layoutY="26.0" text="glisser ici" />
+                              <Label layoutX="13.0" layoutY="26.0" text="glisser ici" />
                            </children>
                         </Pane>
-                        <Label layoutX="586.0" layoutY="153.0" text="ou" />
-                        <CheckBox fx:id="backCB" layoutX="727.0" layoutY="135.0" mnemonicParsing="false" onAction="#handleBackBord" selected="true" text="Fond" />
+                        <Label layoutX="588.0" layoutY="193.0" text="ou" />
+                        <CheckBox fx:id="backCB" layoutX="736.0" layoutY="174.0" mnemonicParsing="false" onAction="#handleBackBord" selected="true" text="Fond" />
                      </children>
                   </Pane>
                </children>
