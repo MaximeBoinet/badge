@@ -48,9 +48,7 @@ public class CamOverView {
         photoTaken = null;
     }
 
-    @FXML
-    public void handlePictureTaken() {
-        setPhotoTaken(ec.getImage());
+    public void close() {
         gs.setNotTaken(false);
 
         try {
@@ -60,8 +58,12 @@ public class CamOverView {
             e.printStackTrace();
         }
         th = null;
-
-        dialogStage.close();
     }
 
+    @FXML
+    public void handlePictureTaken() {
+        setPhotoTaken(ec.getImage());
+        close();
+        dialogStage.close();
+    }
 }

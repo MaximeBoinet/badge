@@ -40,7 +40,9 @@ public class ImageGetter implements Runnable {
                 img = converter.convert(frame);
                 cvFlip(img, img, 1);
                 cont.getEc().setImage(SwingFXUtils.toFXImage(IplImageToBufferedImage(img), null));
-                Thread.sleep(INTERVAL);
+                try {
+                    Thread.sleep(INTERVAL);
+                } catch (InterruptedException e) {}
             }
 
         } catch (Exception e) {

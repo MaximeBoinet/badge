@@ -71,7 +71,7 @@ public class Main extends Application {
             dialogStage.setScene(scene);
             CamOverView controller = loader.getController();
             controller.setDialogStage(dialogStage);
-
+            dialogStage.setOnCloseRequest(((observable) -> controller.close()));
             controller.setFg(grabber);
             dialogStage.showAndWait();
             return controller.getPhotoTaken();
